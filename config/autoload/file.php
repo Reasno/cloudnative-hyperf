@@ -19,5 +19,5 @@ return [
     'version' => 'latest',
     'bucket_endpoint' => false,
     'use_path_style_endpoint' => true,
-    'endpoint' => env('endpoint'),
+    'endpoint' => env('S3_ENDPOINT'),
 ];
