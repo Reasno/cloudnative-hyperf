@@ -39,7 +39,8 @@
         "hyperf/grpc-server": "~1.1.0",
         "hyperf/tracer": "~1.1.0",
         "hyperf/metric": "^1.1",
-        "jonahgeorge/jaeger-client-php": "^0.4.4"
+        "jonahgeorge/jaeger-client-php": "^0.4.4",
+        "league/flysystem": "^1.0"
     },
     "require-dev": {
         "swoft/swoole-ide-helper": "^4.2",

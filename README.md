@@ -8,3 +8,4 @@
 - 由于上述原因，Metric组件默认不开启独立进程，直接从路由输出
 - Worker终止时进行Timer清理，实现在Kubernetes下优雅退出
 - Tracing默认使用Jaeger
+- 集成league/flysystem，开发环境默认使用本地文件系统，其他环境默认使用S3驱动。
