@@ -14,7 +14,7 @@ use Hyperf\Tracer\Adapter\JaegerTracerFactory;
 
 return [
     // 选择默认的 Tracer
-    'default' => env('APP_ENV') === 'PROD' ? 'jaeger-prod' : 'jaeger-dev',
+    'default' => env('APP_ENV') === 'prod' ? 'jaeger-prod' : 'jaeger-dev',
 
     // 这里的代码演示不对 enable 内的配置进行展开
     'enable' => [
