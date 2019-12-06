@@ -12,7 +12,7 @@ declare(strict_types=1);
 
 return [
     'http' => [
-        Hyperf\Metric\Middleware\MetricMiddeware::class,
-        Hyperf\Tracer\Middleware\TraceMiddeware::class,
+        Hyperf\Metric\Middleware\MetricMiddleware::class,
+        Hyperf\Tracer\Middleware\TraceMiddleware::class,
     ],
 ];

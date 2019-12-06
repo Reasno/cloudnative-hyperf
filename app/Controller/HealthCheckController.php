@@ -13,6 +13,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use Prometheus\CollectorRegistry;
+use Prometheus\RenderTextFormat;
 
 class HealthCheckController extends AbstractController
 {
@@ -28,7 +29,7 @@ class HealthCheckController extends AbstractController
 
     public function metrics(CollectorRegistry $registry)
     {
-        $renderer = new Prometheus\RenderTextFormat();
+        $renderer = new RenderTextFormat();
         return $renderer->render($registry->getMetricFamilySamples());
     }
 }
