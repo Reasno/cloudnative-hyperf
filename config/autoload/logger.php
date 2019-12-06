@@ -7,7 +7,7 @@ declare(strict_types=1);
  * @link     https://www.hyperf.io
  * @document https://doc.hyperf.io
  * @contact  group@hyperf.io
- * @license  https://github.com/hyperf-cloud/hyperf/blob/master/LICENSE
+ * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
 return [
@@ -16,13 +16,13 @@ return [
             'class' => Monolog\Handler\ErrorLogHandler::class,
             'constructor' => [
                 'messageType' => Monolog\Handler\ErrorLogHandler::OPERATING_SYSTEM,
-                'level' => env("APP_ENV") === "PROD"
+                'level' => env('APP_ENV') === 'PROD'
                 ? Monolog\Logger::WARNING
                 : Monolog\Logger::DEBUG,
             ],
         ],
         'formatter' => [
-            'class' => env("APP_ENV") === "PROD"
+            'class' => env('APP_ENV') === 'PROD'
             ? Monolog\Formatter\JsonFormatter::class
             : Monolog\Formatter\LineFormatter::class,
         ],
