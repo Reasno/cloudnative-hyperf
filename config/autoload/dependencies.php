@@ -11,6 +11,6 @@ declare(strict_types=1);
  */
 
 return [
-    Hyperf\Contract\StdoutLoggerInterface::class => App\StdoutLoggerFactory::class,
-    League\Flysystem\Filesystem::class => App\FileSystemFactory::class,
+    Hyperf\Contract\StdoutLoggerInterface::class => App\Provider\StdoutLoggerFactory::class,
+    League\Flysystem\Filesystem::class => App\Provider\FileSystemFactory::class,
 ];
