@@ -16,6 +16,7 @@ use Aws\S3\S3Client;
 use Hyperf\Contract\ConfigInterface;
 use Hyperf\Guzzle\CoroutineHandler;
 use League\Flysystem\Adapter\Local;
+use League\Flysystem\AdapterInterface;
 use League\Flysystem\AwsS3v3\AwsS3Adapter;
 use League\Flysystem\Config;
 use League\Flysystem\Filesystem;
@@ -26,7 +27,7 @@ class FileSystemFactory
     public function __invoke(ContainerInterface $container)
     {
         $config = $container->get(ConfigInterface::class);
-        if ($config->get('app_env') === 'dev') {
+        if ($config->get('app_env') === 'local') {
             return new Filesystem(new Local(__DIR__ . '/../../runtime'));
         }
         $options = $container->get(ConfigInterface::class)->get('file');
@@ -34,7 +35,7 @@ class FileSystemFactory
         return new Filesystem($adapter, new Config($options));
     }
 
-    private function adapterFromArray(array $options): AwsS3Adapter
+    private function adapterFromArray(array $options): AdapterInterface
     {
         $options = array_merge($options, ['http_handler' => new CoroutineHandler()]);
         $client = new S3Client($options);

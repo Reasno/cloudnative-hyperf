@@ -12,5 +12,5 @@ declare(strict_types=1);
 
 return [
     'app_name' => env('APP_NAME', 'skeleton'),
-    'app_env' => env('APP_ENV', 'dev'),
+    'app_env' => env('APP_ENV', 'local'),
 ];
