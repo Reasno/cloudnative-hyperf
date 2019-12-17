@@ -20,4 +20,5 @@ return [
     'bucket_endpoint' => false,
     'use_path_style_endpoint' => true,
     'endpoint' => env('S3_ENDPOINT'),
+    'bucket_name' => env('S3_BUCKET'),
 ];
