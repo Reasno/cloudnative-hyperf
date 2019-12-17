@@ -35,8 +35,8 @@ return [
             'options' => [
                 // 采样器，默认为所有请求的都追踪
                 'sampler' => [
-                    'type' => Jaeger\SAMPLER_TYPE_RATE_LIMITING,
-                    'param' => 1.0,
+                    'type' => Jaeger\SAMPLER_TYPE_PROBABILISTIC,
+                    'param' => 0.02,
                 ],
                 // 上报地址
                 'local_agent' => [
