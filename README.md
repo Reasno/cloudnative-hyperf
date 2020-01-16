@@ -12,3 +12,4 @@
 - Worker终止时进行Timer清理，实现在Kubernetes下优雅退出
 - Tracing默认使用Jaeger
 - 集成league/flysystem，开发环境默认使用本地文件系统，其他环境默认使用S3驱动。
+- 开启Error监听器
