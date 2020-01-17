@@ -13,3 +13,10 @@
 - Tracing默认使用Jaeger
 - 集成league/flysystem，开发环境默认使用本地文件系统，其他环境默认使用S3驱动。
 - 开启Error监听器
+- 新增helm chart，一键部署到k8s
+```bash
+#helm 2
+helm install .helm
+#helm 3
+helm install hyperf .helm
+```
