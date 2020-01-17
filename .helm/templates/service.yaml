@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hyperf.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "hyperf.name" . }}
+    helm.sh/chart: {{ include "hyperf.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    prometheus.io/scrape: 'true'
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "hyperf.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

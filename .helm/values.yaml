@@ -1,0 +1,82 @@
+# Default values for hyperf.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: hyperf/hyperf
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 9501
+
+ingress:
+  enabled: false
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  paths: []
+  hosts:
+    - chart-example.local
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  # requests:
+  #  cpu: 100m
+  #  memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+## Configure extra options for liveness and readiness probes
+## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes)
+livenessProbe: {}
+#   httpGet:
+#     path: /liveness
+#     port: 9501
+#   initialDelaySeconds: 5
+#   periodSeconds: 5
+readinessProbe: {}
+#   httpGet:
+#     path: /readiness
+#     port: 9501
+#   initialDelaySeconds: 5
+#   periodSeconds: 5
+
+## .env
+app:
+  name: skeleton
+db:
+  driver: mysql
+  host: localhost
+  port: '3306'
+  database: hyperf
+  username: root
+  password: ''
+  charset: utf8mb4
+  collation: utf8mb4_unicode_ci
+  prefix: ''
+redis:
+  host: localhost
+  auth: (null)
+  port: '6379'
+  db: '0'
