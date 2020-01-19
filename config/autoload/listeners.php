@@ -11,5 +11,8 @@ declare(strict_types=1);
  */
 
 return [
-    \Hyperf\ExceptionHandler\Listener\ErrorExceptionHandler::class
+    \Hyperf\ExceptionHandler\Listener\ErrorExceptionHandler::class,
+    \Hyperf\Metric\Listener\DBPoolWatcher::class,
+    \Hyperf\Metric\Listener\RedisPoolWatcher::class,
+    \Hyperf\Metric\Listener\RedisPoolWatcher::class,
 ];
