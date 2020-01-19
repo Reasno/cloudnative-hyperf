@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
   annotations:
     prometheus.io/scrape: 'true'
-    prometheus.io/port: {{ .Values.service.port }}
+    prometheus.io/port: "{{ .Values.service.port }}"
 spec:
   type: {{ .Values.service.type }}
   ports:
