@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: hyperf/hyperf
+  repository: reasno/cloudnative-hyperf
   tag: latest
   pullPolicy: IfNotPresent
 
