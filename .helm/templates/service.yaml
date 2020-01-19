@@ -7,7 +7,9 @@ metadata:
     helm.sh/chart: {{ include "hyperf.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
+  annotations:
     prometheus.io/scrape: 'true'
+    prometheus.io/port: {{ .Values.service.port }}
 spec:
   type: {{ .Values.service.type }}
   ports:
