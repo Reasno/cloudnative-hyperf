@@ -1,5 +1,5 @@
 # 这个Hyperf骨架包是啥？
-Hyperf官方提供了容器镜像，配置选项又非常开放，将Hyperf部署于云端本身并不复杂。下面我们以Kubernetes为例，对Hyperf默认的骨架包进行一些改造，使它可以优雅的运行于Kubernetes上。本文不是Kubernetes的入门介绍，需要读者已经对Kubernetes有一定了解。
+Hyperf官方提供了容器镜像，配置选项又非常开放，将Hyperf部署于云端本身并不复杂。我们以Kubernetes为例，对Hyperf默认的骨架包进行一些改造，使它可以优雅的运行于Kubernetes上。
 
 请参阅这篇博客：https://guxi.me/posts/cloudnative-hyperf/
 
