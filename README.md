@@ -1,7 +1,7 @@
-# 这个骨架包是啥？
+# 这个Hyperf骨架包是啥？
 请参阅这篇博客：https://guxi.me/posts/cloudnative-hyperf/
 
-# 与官方骨架的区别
+# 与Hyperf官方骨架的区别
 - 增加Kubernetes健康检查路由（具体内容仍需用户自主实现）
 - 按照Docker容器习惯，将日志输出到stdout
 - 在生产环境时输出JSON格式便于集成FluentBit、ELK等收集工具。
