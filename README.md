@@ -1,7 +1,9 @@
-# 这个骨架包是啥？
+# 这个Hyperf骨架包是啥？
+Hyperf官方提供了容器镜像，配置选项又非常开放，将Hyperf部署于云端本身并不复杂。我们以Kubernetes为例，对Hyperf默认的骨架包进行一些改造，使它可以优雅的运行于Kubernetes上。
+
 请参阅这篇博客：https://guxi.me/posts/cloudnative-hyperf/
 
-# 与官方骨架的区别
+# 与Hyperf官方骨架的区别
 - 增加Kubernetes健康检查路由（具体内容仍需用户自主实现）
 - 按照Docker容器习惯，将日志输出到stdout
 - 在生产环境时输出JSON格式便于集成FluentBit、ELK等收集工具。
