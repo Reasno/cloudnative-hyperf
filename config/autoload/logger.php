@@ -26,7 +26,7 @@ return [
             ? Monolog\Formatter\JsonFormatter::class
             : Monolog\Formatter\LineFormatter::class,
         ],
-        'PsrLogMessageProcessor' => [
+        'processor' => [
             'class' => Monolog\Processor\PsrLogMessageProcessor::class,
         ],
     ],
