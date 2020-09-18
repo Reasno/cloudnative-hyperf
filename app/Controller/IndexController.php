@@ -12,8 +12,22 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Hyperf\Apidog\Annotation\ApiController;
+use Hyperf\Apidog\Annotation\ApiResponse;
+use Hyperf\Apidog\Annotation\ApiServer;
+use Hyperf\Apidog\Annotation\GetApi;
+
+/**
+ * @ApiController(tag="Demo", description="Demo接口")
+ * @ApiServer(name="http")
+ */
 class IndexController extends AbstractController
 {
+    /**
+     * @Author Hyperf
+     * @GetApi(path="/", description="Hello World")
+     * @ApiResponse(schema={"method": "GET", "message": "Hello Hyperf"})
+     */
     public function index()
     {
         $user = $this->request->input('user', 'Hyperf');

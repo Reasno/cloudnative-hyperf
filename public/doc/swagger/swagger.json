@@ -1,0 +1,72 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "hyperf swagger api desc",
+        "version": "1.0.0",
+        "title": "HYPERF API DOC"
+    },
+    "host": "apidog.cc",
+    "schemes": [
+        "http"
+    ],
+    "tags": [
+        {
+            "name": "Demo",
+            "description": "Demo接口"
+        }
+    ],
+    "definitions": {
+        "ModelArray": {
+            "type": "array",
+            "required": [],
+            "items": {
+                "type": "string"
+            }
+        },
+        "ModelObject": {
+            "type": "object",
+            "required": [],
+            "items": {
+                "type": "string"
+            }
+        },
+        "GetResponse": {
+            "properties": {
+                "method": {
+                    "type": "string",
+                    "description": "",
+                    "default": "GET"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "",
+                    "default": "Hello Hyperf"
+                }
+            }
+        }
+    },
+    "paths": {
+        "/": {
+            "get": {
+                "tags": [
+                    "Demo"
+                ],
+                "summary": "",
+                "description": "Hello World",
+                "operationId": "GET",
+                "parameters": [],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/GetResponse"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

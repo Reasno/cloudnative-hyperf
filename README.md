@@ -16,6 +16,7 @@ Hyperf官方提供了容器镜像，配置选项又非常开放，将Hyperf部�
 - 集成league/flysystem，开发环境默认使用本地文件系统，其他环境默认使用S3驱动。
 - 开启Error监听器
 - 新增helm chart，一键部署到k8s
+- 集成APIDOG
 ```bash
 #helm 2
 helm install .helm

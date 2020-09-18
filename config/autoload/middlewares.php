@@ -13,6 +13,7 @@ declare(strict_types=1);
 return [
     'http' => [
         Hyperf\Metric\Middleware\MetricMiddleware::class,
-        Hyperf\Tracer\Middleware\TraceMiddeware::class,
+        Hyperf\Tracer\Middleware\TraceMiddleware::class,
+        Hyperf\Apidog\Middleware\ApiValidationMiddleware::class,
     ],
 ];

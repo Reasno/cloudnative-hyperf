@@ -35,11 +35,10 @@
         "hyperf/process": "~2.0.0",
         "hyperf/redis": "~2.0.0",
         "hyperf/utils": "~2.0.0",
-        "hyperf/grpc-client": "~2.0.0",
-        "hyperf/grpc-server": "~2.0.0",
         "hyperf/tracer": "~2.0.0",
         "hyperf/metric": "~2.0.0",
-        "jonahgeorge/jaeger-client-php": "^0.4.4"
+        "jonahgeorge/jaeger-client-php": "^0.4.4",
+        "daodao97/apidog": "^1.5"
     },
     "require-dev": {
         "swoft/swoole-ide-helper": "^4.2",
