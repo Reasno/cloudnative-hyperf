@@ -17,7 +17,8 @@ ARG timezone
 
 ENV TIMEZONE=${timezone:-"Asia/Shanghai"} \
     COMPOSER_VERSION=1.9.0 \
-    APP_ENV=prod
+    APP_ENV=prod \
+    SCAN_CACHEABLE=(true)
 
 # update
 RUN set -ex \
@@ -48,14 +49,12 @@ RUN set -ex \
 
 WORKDIR /opt/www
 
-# Composer Cache
-# COPY ./composer.* /opt/www/
-# RUN composer install --no-dev
+ Composer Cache
+ COPY ./composer.* /opt/www/
+ RUN composer install --no-dev
 
 COPY . /opt/www
-RUN composer install --no-dev \
-    && composer dump-autoload -o \
-    && composer init-proxy
+RUN composer install --no-dev -o && php bin/hyperf.php
 
 EXPOSE 9501
 
