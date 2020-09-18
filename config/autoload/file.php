@@ -9,7 +9,6 @@ declare(strict_types=1);
  * @contact  group@hyperf.io
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
-
 return [
     'default' => 's3',
     'handlers' => [
@@ -26,8 +25,6 @@ return [
             'bucket_name' => env('S3_BUCKET'),
         ],
         'oss' => [
-
-        ]
-    ]
-
+        ],
+    ],
 ];
